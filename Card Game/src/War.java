@@ -168,12 +168,143 @@ public class War
 													}
 											}
 									}
-								else if (computerHand.size() < 4)
+								else if (computerHand.size() == 4)
 									{
-										
+										if (compareWar1 > compareWar2)
+											{
+												System.out.println(
+														"You won this hand with a " + playerHand.get(4).getRank()
+																+ " of " + playerHand.get(4).getSuit()
+																+ " vs the computer's " + computerHand.get(4).getRank()
+																+ " of " + computerHand.get(4).getSuit());
+												playerHand.add(computerHand.get(0));
+												playerHand.add(computerHand.get(1));
+												playerHand.add(computerHand.get(2));
+												playerHand.add(computerHand.get(3));
+												computerHand.remove(0);
+												computerHand.remove(1);
+												computerHand.remove(2);
+												computerHand.remove(3);
+												playerHand.add(playerHand.get(0));
+												playerHand.add(playerHand.get(1));
+												playerHand.add(playerHand.get(2));
+												playerHand.add(playerHand.get(3));
+												playerHand.add(playerHand.get(4));
+												playerHand.remove(0);
+												playerHand.remove(1);
+												playerHand.remove(2);
+												playerHand.remove(3);
+												playerHand.remove(4);
+												System.out.println("The new size of your hand is " + playerHand.size()
+														+ " and the size of the computer's hand is "
+														+ computerHand.size());
+												if (playerHand.size() == 0 || computerHand.size() == 0)
+													{
+														playWar = false;
+													}
+											} else if (compareWar2 > compareWar1)
+											{
+												System.out.println("The computer won this hand with a "
+														+ computerHand.get(4).getRank() + " of "
+														+ computerHand.get(4).getSuit() + " vs your "
+														+ playerHand.get(4).getRank() + " of "
+														+ playerHand.get(4).getSuit());
+												computerHand.add(playerHand.get(0));
+												computerHand.add(playerHand.get(1));
+												computerHand.add(playerHand.get(2));
+												computerHand.add(playerHand.get(3));
+												computerHand.add(playerHand.get(4));
+												playerHand.remove(0);
+												playerHand.remove(1);
+												playerHand.remove(2);
+												playerHand.remove(3);
+												playerHand.remove(4);
+												computerHand.add(computerHand.get(0));
+												computerHand.add(computerHand.get(1));
+												computerHand.add(computerHand.get(2));
+												computerHand.add(computerHand.get(3));
+												computerHand.remove(0);
+												computerHand.remove(1);
+												computerHand.remove(2);
+												computerHand.remove(3);
+												System.out.println("The new size of your hand is " + playerHand.size()
+														+ " and the size of the computer's hand is "
+														+ computerHand.size());
+												if (playerHand.size() == 0 || computerHand.size() == 0)
+													{
+														playWar = false;
+													}
+											}
+									}
+								else if (playerHand.size() == 4)
+									{
+										if (compareWar1 > compareWar2)
+											{
+												System.out.println(
+														"You won this hand with a " + playerHand.get(4).getRank()
+																+ " of " + playerHand.get(4).getSuit()
+																+ " vs the computer's " + computerHand.get(4).getRank()
+																+ " of " + computerHand.get(4).getSuit());
+												playerHand.add(computerHand.get(0));
+												playerHand.add(computerHand.get(1));
+												playerHand.add(computerHand.get(2));
+												playerHand.add(computerHand.get(3));
+												playerHand.add(computerHand.get(4));
+												computerHand.remove(0);
+												computerHand.remove(1);
+												computerHand.remove(2);
+												computerHand.remove(3);
+												computerHand.remove(4);
+												playerHand.add(playerHand.get(0));
+												playerHand.add(playerHand.get(1));
+												playerHand.add(playerHand.get(2));
+												playerHand.add(playerHand.get(3));
+												playerHand.remove(0);
+												playerHand.remove(1);
+												playerHand.remove(2);
+												playerHand.remove(3);
+												System.out.println("The new size of your hand is " + playerHand.size()
+														+ " and the size of the computer's hand is "
+														+ computerHand.size());
+												if (playerHand.size() == 0 || computerHand.size() == 0)
+													{
+														playWar = false;
+													}
+											} else if (compareWar2 > compareWar1)
+											{
+												System.out.println("The computer won this hand with a "
+														+ computerHand.get(4).getRank() + " of "
+														+ computerHand.get(4).getSuit() + " vs your "
+														+ playerHand.get(4).getRank() + " of "
+														+ playerHand.get(4).getSuit());
+												computerHand.add(playerHand.get(0));
+												computerHand.add(playerHand.get(1));
+												computerHand.add(playerHand.get(2));
+												computerHand.add(playerHand.get(3));
+												playerHand.remove(0);
+												playerHand.remove(1);
+												playerHand.remove(2);
+												playerHand.remove(3);
+												computerHand.add(computerHand.get(0));
+												computerHand.add(computerHand.get(1));
+												computerHand.add(computerHand.get(2));
+												computerHand.add(computerHand.get(3));
+												computerHand.add(computerHand.get(4));
+												computerHand.remove(0);
+												computerHand.remove(1);
+												computerHand.remove(2);
+												computerHand.remove(3);
+												computerHand.remove(4);
+												System.out.println("The new size of your hand is " + playerHand.size()
+														+ " and the size of the computer's hand is "
+														+ computerHand.size());
+												if (playerHand.size() == 0 || computerHand.size() == 0)
+													{
+														playWar = false;
+													}
+											}
 									}
 							}
-						// right here
 					}
 			}
 	}
